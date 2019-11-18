@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Enm-g4-TNf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testMVision" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please take a picture of your identity card..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QN5-09-cXV">
+                                <rect key="frame" x="87" y="397" width="240" height="225"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AWk-KB-Up8" customClass="BoundingBoxImageView" customModule="testMVision" customModuleProvider="target">
+                                <rect key="frame" x="87" y="120" width="240" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="Cwm-vy-MV4"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YM7-yZ-jYz">
+                                <rect key="frame" x="180.5" y="721" width="53" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Scan"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGF-VV-fDz">
+                                <rect key="frame" x="159" y="683" width="96" height="30"/>
+                                <state key="normal" title="Generate PDF"/>
+                                <connections>
+                                    <action selector="generatePdfTapped:" destination="BYZ-38-t0r" eventType="touchDown" id="cMy-H4-Par"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AWk-KB-Up8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="56h-rm-Kqo"/>
+                            <constraint firstItem="AWk-KB-Up8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="882-di-IXA"/>
+                            <constraint firstItem="xGF-VV-fDz" firstAttribute="top" secondItem="QN5-09-cXV" secondAttribute="bottom" constant="61" id="AaE-f8-19e"/>
+                            <constraint firstItem="AWk-KB-Up8" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DRZ-EX-gHV"/>
+                            <constraint firstItem="QN5-09-cXV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GjZ-vC-buv"/>
+                            <constraint firstItem="QN5-09-cXV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="OR3-bD-rlj"/>
+                            <constraint firstItem="YM7-yZ-jYz" firstAttribute="top" secondItem="xGF-VV-fDz" secondAttribute="bottom" constant="8" id="VR3-Ux-8CQ"/>
+                            <constraint firstItem="YM7-yZ-jYz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WOd-iJ-Czz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YM7-yZ-jYz" secondAttribute="bottom" constant="100" id="bdT-60-T6X"/>
+                            <constraint firstItem="QN5-09-cXV" firstAttribute="top" secondItem="AWk-KB-Up8" secondAttribute="bottom" constant="87" id="bxy-Of-KI1"/>
+                            <constraint firstItem="xGF-VV-fDz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qAy-06-EKM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="EAT-Qr-sn4"/>
+                    <connections>
+                        <outlet property="imageView" destination="AWk-KB-Up8" id="Dxs-0l-Zcg"/>
+                        <outlet property="pdfButton" destination="xGF-VV-fDz" id="sK7-hF-ZD5"/>
+                        <outlet property="scanButton" destination="YM7-yZ-jYz" id="qnP-0n-9D0"/>
+                        <outlet property="textView" destination="QN5-09-cXV" id="V9k-qz-gyG"/>
+                        <segue destination="xdm-FB-u2N" kind="show" identifier="PdfPreview" id="swq-H7-gJ8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
+        </scene>
+        <!--Pdf Preview View Controller-->
+        <scene sceneID="gm9-e7-1LU">
+            <objects>
+                <viewController id="xdm-FB-u2N" customClass="PdfPreviewViewController" customModule="testMVision" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yEz-lT-jY6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2M-Pt-F75">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Cdf-33-JVg" firstAttribute="trailing" secondItem="X2M-Pt-F75" secondAttribute="trailing" id="0dI-p9-eDH"/>
+                            <constraint firstItem="X2M-Pt-F75" firstAttribute="top" secondItem="Cdf-33-JVg" secondAttribute="top" id="GJf-Rd-j0E"/>
+                            <constraint firstItem="X2M-Pt-F75" firstAttribute="leading" secondItem="Cdf-33-JVg" secondAttribute="leading" id="J4i-Dw-0ge"/>
+                            <constraint firstItem="Cdf-33-JVg" firstAttribute="bottom" secondItem="X2M-Pt-F75" secondAttribute="bottom" id="XI3-Oc-529"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Cdf-33-JVg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="K3e-99-HG5"/>
+                    <connections>
+                        <outlet property="webView" destination="X2M-Pt-F75" id="vZd-LW-Tqa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bdl-T1-CIJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2184.057971014493" y="126.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fbh-c6-CvN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Enm-g4-TNf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Caf-e2-tAp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KoQ-jQ-zau"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I6n-G3-w23" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>

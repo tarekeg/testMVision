@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (4.9.1)
+  - IQKeyboardManagerSwift (6.5.4)
+  - SimplePDF (3.0.0)
+  - SwiftyJSON (5.0.0)
+  - TesseractOCRiOS (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - IQKeyboardManagerSwift
+  - SimplePDF
+  - SwiftyJSON
+  - TesseractOCRiOS
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - IQKeyboardManagerSwift
+    - SimplePDF
+    - SwiftyJSON
+    - TesseractOCRiOS
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
+  SimplePDF: 903143ede36965886997a5c1bc6b8940b082ba20
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  TesseractOCRiOS: 2c189465f86abb030d0c5141c90da9705b647854
+
+PODFILE CHECKSUM: cf6fea14bc93b21bcb96153c6d2d1884ce85196e
+
+COCOAPODS: 1.8.4
